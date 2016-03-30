@@ -24,6 +24,9 @@ class PostsIndex extends Component{
   }
 
   render(){
+     if(!this.props.posts){
+       return <div>Loading...</div>
+     }
      return(
         <div>
           <div className="text-xs-right">
