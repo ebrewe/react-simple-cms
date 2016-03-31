@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchPost } from '../actions/index';
+import { Link } from 'react-router';
 
 class PostsShow extends Component{
 
@@ -16,6 +17,7 @@ class PostsShow extends Component{
     const categories = post.categories.split(',');
     return (
         <div>
+          <Link to="/">Back to Index</Link>
           <h3>{post.title}</h3>
           <h6>In {categories.map((category)=>{return <a href>{category}</a>})}</h6>
           <p>{post.content}</p>
